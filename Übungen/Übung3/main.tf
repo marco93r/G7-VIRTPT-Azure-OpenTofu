@@ -92,3 +92,7 @@ resource "azurerm_subnet_network_security_group_association" "nsg_association" {
   subnet_id                 = azurerm_subnet.snet_main.id
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
+
+output "pip_ip" {
+  value = azurerm_public_ip.pip_vm_01
+}
